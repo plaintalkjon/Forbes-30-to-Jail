@@ -1,0 +1,12 @@
+{
+  "name": "forbes-30-to-jail",
+  "version": "1.0.0",
+  "description": "Goal: Honor Forbes' respectable history of promoting criminals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
