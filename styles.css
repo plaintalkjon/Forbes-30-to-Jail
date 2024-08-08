@@ -16,13 +16,15 @@ body
     color: white;
     margin: 0px;
     padding: 0px;
+    
 }
 
 nav 
 {
-    padding: .5em;
     font-size: large;
     box-shadow: var(--accent) 0em 0em .250em .125em;
+    margin: 0px;
+    padding: 0;
 }
 
 nav a
@@ -39,31 +41,40 @@ nav a:hover
 header
 {
     text-align: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 header h3
 {
     font-style: italic;
+    overflow:hidden;
 }
 
-.gallery
+#gallery-all 
 {
-    display: inline;
+    display: flex;
     text-align: center;
 }
 
 .gallery img 
 {
-    border: .125em solid rgb(218, 255, 237);
-    margin: 1em;
-    width: 15%;
-
+    border: .250em solid rgb(218, 255, 237, 75%);
+    height: auto;
+    width: 50%;
 }
 
-/* If you increase the border, decrease margin by the same amount to prevent image movement */
 .gallery img:hover
 {
     border: .250em solid rgb(218, 255, 237);
-    margin: 0.850em;
+}
 
+.photos .caroline 
+{
+    
+}
+
+.nametags 
+{
+    text-decoration: underline;
 }
