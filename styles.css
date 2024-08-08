@@ -1,9 +1,69 @@
 :root
 {
-    --rich-black: #111118ff;
+    --background: rgb(20, 21, 20);
     --red-crayola: #ee4266ff;
-    --sunglow: #ffd23fff;
-    --argentinian-blue: #35a7ffff;
-    --mint-green: #daffedff;
+    --links: rgb(255, 222, 112);
+    --oldlinks: rgb(97, 232, 225);
+    --accent: rgb(218, 255, 237);
+    --regular: 1em;
+    --medium: 1.25em;
+    --large: 1.5em; 
 }
 
+body 
+{
+    background-color: var(--background);
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav 
+{
+    padding: .5em;
+    font-size: large;
+    box-shadow: var(--accent) 0em 0em .250em .125em;
+}
+
+nav a
+{
+    color:var(--links);
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    text-decoration: underline;
+}
+
+header
+{
+    text-align: center;
+}
+
+header h3
+{
+    font-style: italic;
+}
+
+.gallery
+{
+    display: inline;
+    text-align: center;
+}
+
+.gallery img 
+{
+    border: .125em solid rgb(218, 255, 237);
+    margin: 1em;
+    width: 15%;
+
+}
+
+/* If you increase the border, decrease margin by the same amount to prevent image movement */
+.gallery img:hover
+{
+    border: .250em solid rgb(218, 255, 237);
+    margin: 0.850em;
+
+}
