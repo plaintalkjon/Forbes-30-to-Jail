@@ -1,80 +1,136 @@
 :root
 {
+    
     --background: rgb(20, 21, 20);
-    --red-crayola: #ee4266ff;
-    --links: rgb(255, 222, 112);
+    --accent-2: #ee4266ff;
+    --accent: rgb(255, 222, 112);
     --oldlinks: rgb(97, 232, 225);
-    --accent: rgb(218, 255, 237);
+    --links: rgb(218, 255, 237);
+    --text-color: white;
     --regular: 1em;
     --medium: 1.25em;
-    --large: 1.5em; 
+    --large: 1.5em;
+    --xlarge: 1.75em;
 }
 
 body 
 {
-    background-color: var(--background);
     color: white;
-    margin: 0px;
-    padding: 0px;
-    
+    background-color: var(--background);
+    font-family: 'Poppins', sans-serif;
 }
 
 nav 
 {
-    font-size: large;
-    box-shadow: var(--accent) 0em 0em .250em .125em;
-    margin: 0px;
-    padding: 0;
+    display: block;
+    font-weight: bold;
+    font-size: var(--medium);
+    box-shadow: var(--accent) 0em .0625em;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background-color: var(--background);
 }
 
-nav a
+a
 {
-    color:var(--links);
+    color:var(--text-color);
     text-decoration: none;
 }
 
-nav a:hover
+a:hover
 {
     text-decoration: underline;
+}
+
+nav li 
+{
+    display: inline-block;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 2em;
+    margin: .1em
+}
+
+nav li.dropdown
+{
+    width: 100%;
+    position: absolute;
+    display:block;
+    z-index: 999;
+}
+
+li.dropdown :hover
+{
+    background-color: red;
+    display: block;
+    z-index: 0;
 }
 
 header
 {
+    line-height: .5em;
     text-align: center;
-    margin: 0px;
-    padding: 0px;
+    margin-top: 5em;
+    font-size: var(--xlarge);
+    margin-bottom: 2em;
 }
 
-header h3
-{
-    font-style: italic;
-    overflow:hidden;
-}
+@media (max-width: 700px) {
+    header {
+        margin-top: 6em;
+        line-height: 2em;
+    }
+  }
 
-#gallery-all 
+.gallery
 {
-    display: flex;
+    width: 20em;
+    height: auto;
     text-align: center;
+    margin-left: 0em;
+    margin-bottom: 2em;
+    float:left;
+
 }
 
 .gallery img 
 {
-    border: .250em solid rgb(218, 255, 237, 75%);
-    height: auto;
-    width: 50%;
+    border: .250em solid var(--accent);
+    width: 60%;
+    border-radius: 1em;
 }
 
 .gallery img:hover
 {
-    border: .250em solid rgb(218, 255, 237);
+    border: .250em solid var(--accent-2);
 }
 
-.photos .caroline 
+.gallery a
 {
-    
+    display: block;
+    font-size: var(--medium);
+    font-weight: bold;
 }
 
-.nametags 
+.ProfilePage
 {
-    text-decoration: underline;
+    font-size: var(--large);
+    line-height: 1.5em;
+    display: flex;
+    justify-content: flex-start;
+}
+
+img.profile
+{
+    width: 10em;
+    height: auto;
+}
+
+.ProfileDiv
+{
+    top: 0%;
+    font-size: .75em;
 }
