@@ -1,6 +1,6 @@
 :root
 {
-    
+    --nav-color: rgb(63, 63, 63);
     --background: rgb(20, 21, 20);
     --accent-2: #ee4266ff;
     --accent: rgb(255, 222, 112);
@@ -22,7 +22,6 @@ body
 
 nav 
 {
-    display: block;
     font-weight: bold;
     font-size: var(--medium);
     box-shadow: var(--accent) 0em .0625em;
@@ -30,8 +29,7 @@ nav
     top: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    background-color: var(--background);
+    background-color: var(--nav-color);
 }
 
 a
@@ -54,17 +52,25 @@ nav li
     margin: .1em
 }
 
-nav li.dropdown
+ul li ul.dropdown li
 {
-    width: 100%;
-    position: absolute;
-    display:block;
-    z-index: 999;
+    display: block;
 }
 
-li.dropdown :hover
+ul li ul.dropdown
 {
-    background-color: red;
+    position:absolute;
+    display:none;
+    z-index: 999;
+    text-align: left;
+    width: 20%;
+    background-color: var(--nav-color);
+    left: 8.1%;
+}
+
+ul li:hover ul.dropdown
+{
+
     display: block;
     z-index: 0;
 }
@@ -104,6 +110,18 @@ header
 }
 
 .gallery img:hover
+{
+    border: .250em solid var(--accent-2);
+}
+
+.profile img 
+{
+    border: .250em solid var(--accent);
+    width: 60%;
+    border-radius: 1em;
+}
+
+.profile img:hover
 {
     border: .250em solid var(--accent-2);
 }
